@@ -1,13 +1,105 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>proyecto-1-therianusmulticines</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therianus Multicines</title>
+    
+    <link rel="stylesheet" href="src/style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="bg-gradient-to-b from-cine-bg to-black text-cine-cream font-sans overflow-hidden">
+    
+    <div id="cortinas" class="fixed inset-0 z-50 flex overflow-hidden bg-black">
+        
+        <div id="cortina-izq" class="w-1/2 h-full z-20 relative bg-[url('/cortinaizquierda.jpg')] bg-cover bg-left">
+            <div class="absolute inset-0 bg-black/30"></div> </div>
+        
+        <div id="cortina-der" class="w-1/2 h-full z-20 relative bg-[url('/cortinaderecha.jpg')] bg-cover bg-right">
+            <div class="absolute inset-0 bg-black/30"></div> </div>
+        
+        <button id="btn-entrar" class="absolute z-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cine-cream text-cine-bg font-bold py-4 px-8 rounded-full text-2xl hover:bg-cine-yellow transition-colors hover:scale-110 border-4 border-cine-bg/30">
+         Ver cartelera
+        </button>
+
+        <audio id="audio-boton" src="/clic.mp3"></audio>
+    </div>
+    
+    <audio id="musica-fondo" src="/musicafondo.mp3" loop></audio>
+
+    <div id="contenido-principal" class="opacity-0">
+        
+        <header class="h-screen flex flex-col items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0"></div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold text-cine-cream mb-10 z-10 drop-shadow-lg text-center">
+                Therianus Multicines
+            </h1>
+        </header>
+
+        <main></main>
+        <section></section>
+
+        <footer>
+           <br><br>
+        </footer>
+    </div>
+    
+    <script>
+        // Activamos el plugin de scroll 
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Instanciamos los elementos del HTML que vamos a manipular
+        const audioClic = document.getElementById('audio-boton');
+        const musica = document.getElementById('musica-fondo');
+        const btnEntrar = document.getElementById('btn-entrar');
+        const cortinas = document.getElementById('cortinas');
+
+        // Forzamos que la web esté oculta al cargar
+        gsap.set("#contenido-principal", { opacity: 0 });
+
+        // CUando le das al boton:
+        btnEntrar.addEventListener('click', () => {
+            
+            // TEMA AUDIOS
+            if (audioClic) {
+                audioClic.play().catch(e => console.log("Aviso: Falta el mp3 del clic"));
+                
+                // Al darle clic empieza la musica de fondo
+                audioClic.addEventListener('ended', () => {
+                    if (musica) musica.play().catch(e => console.log("Aviso: Falta la música"));
+                }, { once: true });
+            } else if (musica) {
+                // Si no hay clic, se pone la musica directamente
+                musica.play().catch(e => console.log("Aviso: Falta la música"));
+            }
+
+            // TEMA ANIMACIONES
+            // El boton de Entrar desaparece
+            gsap.to(btnEntrar, { opacity: 0, duration: 0.3, onComplete: () => btnEntrar.style.display = 'none' });
+
+            // Se abre la cortina hasta el final de la pantalla
+            gsap.to("#cortina-izq", { x: "-100%", duration: 3, ease: "power3.inOut" });
+            gsap.to("#cortina-der", { x: "100%", duration: 3, ease: "power3.inOut", onComplete: () => {
+                // Cuando terminan de abrirse
+                cortinas.style.display = 'none'; // Se borra el telon del HTML
+                
+                // La pagina vuelve a tener scroll
+                document.body.classList.remove('overflow-hidden');
+                document.body.classList.add('overflow-x-hidden');
+            }});
+
+            // Aparece la web con FadeIn de abajo a arriba
+            // Con el delay de 3s se espera a que el telón esté abierto para iluminarse.
+            gsap.fromTo("#contenido-principal", 
+                { opacity: 0, y: 50 }, 
+                { opacity: 1, y: 0, duration: 3, delay: 3, ease: "power2.out" }
+            );
+        });
+      
+    </script>
+</body>
 </html>
