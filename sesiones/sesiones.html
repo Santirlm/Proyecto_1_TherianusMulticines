@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css">
+    <title>Sesiones</title>
+  </head>
+  <body class="bg-(--color-azul-medianoche)">
+
+    <!-- Navegación -->
+     <nav class="text-white flex p-5">
+      <h1 class="text-3xl">Logo</h1>
+
+      <a class="ml-auto" href="../index.html">Volver a la página de inicio</a>
+     </nav>
+
+    <main>
+      <!-- Fechas Sesiones -->
+      <div class="session-container">
+        <div class="flex items-baseline space-x-12">
+          <div class="date-item" data-date="21">21</div>
+          <div class="date-item active" data-date="22">22</div>
+          <div class="date-item" data-date="23">23</div>
+          <div class="date-item" data-date="24">24</div>
+          <div class="date-item" data-date="24">25</div>
+          <div class="date-item" data-date="24">26</div>
+          <div class="date-item" data-date="24">27</div>
+          <div class="date-item" data-date="24">28</div>
+          <div class="date-item" data-date="24">29</div>
+          <div class="date-item" data-date="24">30</div>
+          <div class="date-item" data-date="24">31</div>
+          <div class="date-item" data-date="24">01</div>
+        </div>
+      </div>
+
+      <!-- Peliculas -->
+        <section class="cloneable">
+
+          <!-- Karatae a muerte en Torremolinos-->
+          <div data-hover="" data-pixelated-image-reveal="" class="pixelated-image-card">
+            <div class="before__100"></div>
+            <div class="pixelated-image-card__default">
+              <img src="../public/Portada-Torremolinos.jpg" width="400" alt="" class="pixelated-image-card__img">
+            </div>
+            <div data-pixelated-image-reveal-active="" class="pixelated-image-card__active">
+              <img src="../public/prime-torremolinos.jpg" width="400" alt="" class="pixelated-image-card__img">
+            </div>
+            <div data-pixelated-image-reveal-grid="" class="pixelated-image-card__pixels">
+              <div class="pixelated-image-card__pixel"></div>
+            </div>
+          </div>
+        </section>
+    </main>
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
