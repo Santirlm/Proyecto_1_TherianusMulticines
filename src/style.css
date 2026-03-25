@@ -1,21 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
-    /* Paleta colores principal */
-    --color-cine-bg: #1b1b2f;
-    --color-cine-blue-dark: #2b4071;
-    --color-cine-blue: #0081c9;
-    --color-cine-cream: #fcf5e3;
-    --color-cine-yellow: #fad27a;
-    --color-cine-peach: #eca888;
-    --color-cine-orange: #f57d4a;
-    --color-cine-violet: #964b6b;
-    --color-cine-red: #9f2b3b;
+    /* Paleta de colores nueva */
+    --color-cine-bg: #0d0d0d;
+    --color-cine-card: #1a1a1a;
+    --color-cine-placeholder: #111;
+    
+    --color-cine-border: #2a2a2a;
+    --color-cine-sep: #1e1e1e;
+    
+    --color-cine-text: #f0e6d3;
+    --color-cine-text-sec: #c9b99a;
+    --color-cine-text-low: #8a7a6a;
+    
+    --color-cine-gold: #e8a87c;
+
+    /* Fuentes */
+    --font-cinzel: 'Cinzel', serif;
+    --font-inter: 'Inter', sans-serif;
 }
 
 @layer base {
-  /* Scrollbar personalizado */
   html {
-    scrollbar-color: var(--color-cine-red) var(--color-cine-bg);
+    scrollbar-width: thin;
+    /* Barra color dorado, fondo color negro principal */
+    scrollbar-color: var(--color-cine-gold) var(--color-cine-bg);
   }
 }

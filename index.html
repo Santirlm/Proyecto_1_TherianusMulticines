@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Therianus Multicines</title>
-    
     <link rel="stylesheet" href="src/style.css">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
-<body class="bg-gradient-to-b from-cine-bg to-black text-cine-cream font-sans overflow-hidden">
+<body class="bg-cine-bg text-cine-text font-inter overflow-hidden">
     
     <div id="cortinas" class="fixed inset-0 z-50 flex overflow-hidden bg-black">
-        
         <div id="cortina-izq" class="w-1/2 h-full z-20 relative bg-[url('/cortinaizquierda.jpg')] bg-cover bg-left">
-            <div class="absolute inset-0 bg-black/30"></div> </div>
+            <div class="absolute inset-0 bg-black/40"></div> 
+        </div>
         
         <div id="cortina-der" class="w-1/2 h-full z-20 relative bg-[url('/cortinaderecha.jpg')] bg-cover bg-right">
-            <div class="absolute inset-0 bg-black/30"></div> </div>
+            <div class="absolute inset-0 bg-black/40"></div> 
+        </div>
         
-        <button id="btn-entrar" class="absolute z-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cine-cream text-cine-bg font-bold py-4 px-8 rounded-full text-2xl hover:bg-cine-yellow transition-colors hover:scale-110 border-4 border-cine-bg/30">
-         Ver cartelera
+        <button id="btn-entrar" class="absolute z-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+        bg-cine-gold text-cine-bg font-cinzel font-bold py-4 px-10 rounded-full text-2xl hover:brightness-110 transition-all
+         hover:scale-105">
+          Ver cartelera
         </button>
 
         <audio id="audio-boton" src="/clic.mp3"></audio>
@@ -32,74 +31,88 @@
 
     <div id="contenido-principal" class="opacity-0">
         
-        <header class="h-screen flex flex-col items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0"></div>
-            
-            <h1 class="text-5xl md:text-7xl font-bold text-cine-cream mb-10 z-10 drop-shadow-lg text-center">
+        <header class="h-screen flex flex-col items-center justify-center relative overflow-hidden px-4">
+            <h1 class="font-cinzel text-5xl md:text-8xl font-bold text-cine-gold mb-4 z-10 text-center">
                 Therianus Multicines
             </h1>
+            
+            <h2 class="font-cinzel text-xl md:text-3xl text-cine-text-sec mb-12 z-10 tracking-[0.3em] uppercase opacity-80">
+                Próximos estrenos
+            </h2>
+
+            <div class="w-full max-w-6xl overflow-hidden z-10">
+                <div id="carrusel" class="flex gap-6 px-4">  
+
+                    <div class="w-64 h-96 flex-none rounded-sm border border-cine-border bg-cine-card shadow-2xl overflow-hidden group">
+                      <img src="/zootropolis2.jpg" class="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" />
+                    </div>
+                    
+                    <div class="w-64 h-96 flex-none rounded-sm border border-cine-border bg-cine-card shadow-2xl overflow-hidden group">
+                      <img src="/zootropolis2.jpg" class="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" />
+                    </div>
+
+                    <div class="w-64 h-96 flex-none rounded-sm border border-cine-border bg-cine-card shadow-2xl overflow-hidden group">
+                      <img src="/zootropolis2.jpg" class="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" />
+                    </div>
+                   <div class="w-64 h-96 flex-none rounded-sm border border-cine-border bg-cine-card shadow-2xl overflow-hidden group">
+                      <img src="/zootropolis2.jpg" class="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" />
+                    </div>
+                    
+                    <div class="w-64 h-96 flex-none rounded-sm border border-cine-border bg-cine-card shadow-2xl overflow-hidden group">
+                      <img src="/zootropolis2.jpg" class="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" />
+                    </div>                                             
+                </div>
+            </div>
         </header>
 
-        <main></main>
-        <section></section>
+       <main class="min-h-screen border-t border-cine-sep bg-cine-bg py-20 px-8">
+            
+            <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-cine-gold mb-16 text-center uppercase">
+                Cartelera Actual
+            </h2>
+        
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+               
+        <a href="detalles.html" class="pelicula bg-cine-card rounded-sm border border-cine-border overflow-hidden shadow-2xl transition-colors transition-shadow duration-300 block group hover:border-cine-gold hover:shadow-[0_0_30px] hover:shadow-cine-blue/60">
+                  <div class="h-150 bg-cine-placeholder bg-[url('/zootropolis2.jpg')] bg-cover bg-center transition-all duration-500"></div>
+                  
+                  <div class="p-8 border-t border-cine-border">
+                      <h3 class="font-cinzel text-2xl font-bold text-cine-text mb-2 group-hover:text-cine-gold transition-colors">Película Uno</h3>
+                      <p class="font-inter text-cine-text-sec text-sm uppercase opacity-80">Haz clic para ver detalles</p>
+                  </div>
+               </a>
 
-        <footer>
-           <br><br>
+                
+        <a href="detalles.html" class="pelicula bg-cine-card rounded-sm border border-cine-border overflow-hidden shadow-2xl transition-colors transition-shadow duration-300 block group hover:border-cine-gold hover:shadow-[0_0_30px] hover:shadow-cine-blue/60">
+                  <div class="h-150 bg-cine-placeholder bg-[url('/zootropolis2.jpg')] bg-cover bg-center transition-all duration-500"></div>
+                  
+                  <div class="p-8 border-t border-cine-border">
+                      <h3 class="font-cinzel text-2xl font-bold text-cine-text mb-2 group-hover:text-cine-gold transition-colors">Película Uno</h3>
+                      <p class="font-inter text-cine-text-sec text-sm uppercase opacity-80">Haz clic para ver detalles</p>
+                  </div>
+               </a>
+
+                
+        <a href="detalles.html" class="pelicula bg-cine-card rounded-sm border border-cine-border overflow-hidden shadow-2xl transition-colors transition-shadow duration-300 block group hover:border-cine-gold hover:shadow-[0_0_30px] hover:shadow-cine-blue/60">
+                  <div class="h-150 bg-cine-placeholder bg-[url('/zootropolis2.jpg')] bg-cover bg-center transition-all duration-500"></div>
+                  
+                  <div class="p-8 border-t border-cine-border">
+                      <h3 class="font-cinzel text-2xl font-bold text-cine-text mb-2 group-hover:text-cine-gold transition-colors">Película Uno</h3>
+                      <p class="font-inter text-cine-text-sec text-sm uppercase opacity-80">Haz clic para ver detalles</p>
+                  </div>
+               </a> 
+                 
+            </div>
+        </main>
+
+        <footer class="py-12 bg-black border-t border-cine-border text-center">
+            <p class="font-cinzel text-cine-text-low text-xs tracking-[0.4em] uppercase">
+                Proyecto StoryTelling DAMDAW — Armando, Jorge, Santiago
+            </p>
         </footer>
     </div>
     
-    <script>
-        // Activamos el plugin de scroll 
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Instanciamos los elementos del HTML que vamos a manipular
-        const audioClic = document.getElementById('audio-boton');
-        const musica = document.getElementById('musica-fondo');
-        const btnEntrar = document.getElementById('btn-entrar');
-        const cortinas = document.getElementById('cortinas');
-
-        // Forzamos que la web esté oculta al cargar
-        gsap.set("#contenido-principal", { opacity: 0 });
-
-        // CUando le das al boton:
-        btnEntrar.addEventListener('click', () => {
-            
-            // TEMA AUDIOS
-            if (audioClic) {
-                audioClic.play().catch(e => console.log("Aviso: Falta el mp3 del clic"));
-                
-                // Al darle clic empieza la musica de fondo
-                audioClic.addEventListener('ended', () => {
-                    if (musica) musica.play().catch(e => console.log("Aviso: Falta la música"));
-                }, { once: true });
-            } else if (musica) {
-                // Si no hay clic, se pone la musica directamente
-                musica.play().catch(e => console.log("Aviso: Falta la música"));
-            }
-
-            // TEMA ANIMACIONES
-            // El boton de Entrar desaparece
-            gsap.to(btnEntrar, { opacity: 0, duration: 0.3, onComplete: () => btnEntrar.style.display = 'none' });
-
-            // Se abre la cortina hasta el final de la pantalla
-            gsap.to("#cortina-izq", { x: "-100%", duration: 3, ease: "power3.inOut" });
-            gsap.to("#cortina-der", { x: "100%", duration: 3, ease: "power3.inOut", onComplete: () => {
-                // Cuando terminan de abrirse
-                cortinas.style.display = 'none'; // Se borra el telon del HTML
-                
-                // La pagina vuelve a tener scroll
-                document.body.classList.remove('overflow-hidden');
-                document.body.classList.add('overflow-x-hidden');
-            }});
-
-            // Aparece la web con FadeIn de abajo a arriba
-            // Con el delay de 3s se espera a que el telón esté abierto para iluminarse.
-            gsap.fromTo("#contenido-principal", 
-                { opacity: 0, y: 50 }, 
-                { opacity: 1, y: 0, duration: 3, delay: 3, ease: "power2.out" }
-            );
-        });
-      
-    </script>
+    <script type="module" src="/src/main.js"></script> 
 </body>
 </html>
