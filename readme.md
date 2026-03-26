@@ -20,7 +20,7 @@ La página web simula la experiencia de usuario de un cine real e incluye las si
 ## 👥 Equipo de Desarrollo
 
 * Jorge Diaz
-* Armando Guerra
+* Armando Vicedo
 * Santiago Ramirez
 
 ## ⚙️ Instalación y Ejecución
