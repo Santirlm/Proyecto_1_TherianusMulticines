@@ -56,7 +56,7 @@
   }
 
   .date-btn:hover {
-    @apply text-(--text-secondary) bg-(--surface-2) scale-105;
+    @apply text-(--accent) bg-(--surface-2) scale-105 opacity-100;
   }
 
   .date-btn.active {
