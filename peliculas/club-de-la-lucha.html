@@ -6,118 +6,144 @@
     <title>Club de la Lucha</title>
     <link rel="stylesheet" href="../src/style.css">
   </head>
-  <body class="bg-gray-900 text-white">
+  <body class="bg-[#0d0d0d] text-[#f0e6d3] overflow-x-hidden font-inter">
 
-    <a href="../index.html" class="text-sm underline p-4 block">← Volver al catálogo</a>
+    <a href="../index.html" class="fixed top-4 left-6 text-[#e8a87c] text-sm hover:underline z-50 font-inter">← Volver al catálogo</a>
 
-    <section class="flex flex-col md:flex-row gap-6 p-8">
+    <section class="min-h-screen flex flex-col md:flex-row gap-8 p-10 items-center pt-20">
         <div class="pelicula-img w-full md:w-1/2">
-            <div class="w-full h-80 bg-gray-700 flex items-center justify-center">
+            <div class="w-full h-96 bg-[#1a1a1a] rounded-sm flex items-center justify-center text-[#555] border border-[#2a2a2a]">
                 IMAGEN DE LA PELÍCULA
             </div>
         </div>
-        <div class="pelicula-info w-full md:w-1/2 flex flex-col gap-4 p-4">
-            <h1 class="text-4xl font-bold">Club de la Lucha</h1>
-            <p class="text-gray-300">Un oficinista insomne y un fabricante de jabón forman un club de lucha clandestino que evoluciona hacia algo mucho más peligroso.</p>
-            <div class="valoracion flex items-center gap-2">
-                <span class="text-4xl font-bold">8.8</span>
+        <div class="pelicula-info w-full md:w-1/2 flex flex-col gap-6">
+            <h1 class="text-5xl font-bold text-[#e8a87c] font-cinzel">Club de la Lucha</h1>
+            <p class="text-[#c9b99a] text-lg leading-relaxed">Un oficinista insomne y un fabricante de jabón forman un club de lucha clandestino que evoluciona hacia algo mucho más peligroso.</p>
+            <div class="valoracion flex items-center gap-3">
+                <span class="text-5xl font-bold text-[#e8a87c] font-cinzel">8.8</span>
                 <div class="flex flex-col">
-                    <span class="text-sm">/ 10</span>
-                    <span class="text-xs text-gray-400">Media de valoración</span>
+                    <span class="text-[#f0e6d3] text-sm">/ 10</span>
+                    <span class="text-[#8a7a6a] text-xs">Media de valoración</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="p-8 border-t border-gray-700">
-        <h2 class="text-xl font-bold mb-6">Ficha Técnica</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="ficha-item flex flex-col gap-1">
-                <span class="text-xs text-gray-400">Director</span>
-                <span class="text-sm">David Fincher</span>
-            </div>
-            <div class="ficha-item flex flex-col gap-1">
-                <span class="text-xs text-gray-400">Año</span>
-                <span class="text-sm">1999</span>
-            </div>
-            <div class="ficha-item flex flex-col gap-1">
-                <span class="text-xs text-gray-400">Duración</span>
-                <span class="text-sm">139 min</span>
-            </div>
-            <div class="ficha-item flex flex-col gap-1">
-                <span class="text-xs text-gray-400">Género</span>
-                <span class="text-sm">Drama / Thriller</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="p-8 border-t border-gray-700 text-center">
-        <div class="frase-contenedor max-w-2xl mx-auto">
-            <p class="frase-texto text-xl italic text-gray-300">"La primera regla del Club de la Lucha es: no hablar del Club de la Lucha."</p>
-            <p class="frase-autor text-sm text-gray-500 mt-4">— Tyler Durden</p>
-        </div>
-    </section>
-
-    <section class="p-8 border-t border-gray-700">
-        <h2 class="text-xl font-bold mb-6">Reparto Principal</h2>
+    <section class="px-10 py-12 border-t border-[#1e1e1e]">
+        <h2 class="ficha-titulo text-xl font-bold text-[#e8a87c] mb-8 tracking-widest uppercase font-cinzel">Ficha Técnica</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="actor-item flex flex-col items-center gap-2">
-                <div class="w-20 h-20 bg-gray-700 flex items-center justify-center text-xs">FOTO</div>
-                <p class="text-sm">Brad Pitt</p>
-                <p class="text-xs text-gray-400">Tyler Durden</p>
+            <div class="ficha-item flex flex-col gap-1">
+                <span class="text-[#8a7a6a] text-xs tracking-widest uppercase">Director</span>
+                <span class="text-[#f0e6d3] text-sm">David Fincher</span>
             </div>
-            <div class="actor-item flex flex-col items-center gap-2">
-                <div class="w-20 h-20 bg-gray-700 flex items-center justify-center text-xs">FOTO</div>
-                <p class="text-sm">Edward Norton</p>
-                <p class="text-xs text-gray-400">El Narrador</p>
+            <div class="ficha-item flex flex-col gap-1">
+                <span class="text-[#8a7a6a] text-xs tracking-widest uppercase">Año</span>
+                <span class="text-[#f0e6d3] text-sm">1999</span>
             </div>
-            <div class="actor-item flex flex-col items-center gap-2">
-                <div class="w-20 h-20 bg-gray-700 flex items-center justify-center text-xs">FOTO</div>
-                <p class="text-sm">Helena Bonham Carter</p>
-                <p class="text-xs text-gray-400">Marla Singer</p>
+            <div class="ficha-item flex flex-col gap-1">
+                <span class="text-[#8a7a6a] text-xs tracking-widest uppercase">Duración</span>
+                <span class="text-[#f0e6d3] text-sm">139 min</span>
             </div>
-            <div class="actor-item flex flex-col items-center gap-2">
-                <div class="w-20 h-20 bg-gray-700 flex items-center justify-center text-xs">FOTO</div>
-                <p class="text-sm">Meat Loaf</p>
-                <p class="text-xs text-gray-400">Robert Paulson</p>
+            <div class="ficha-item flex flex-col gap-1">
+                <span class="text-[#8a7a6a] text-xs tracking-widest uppercase">Género</span>
+                <span class="text-[#f0e6d3] text-sm">Drama / Thriller</span>
             </div>
         </div>
     </section>
 
-    <section class="p-8 border-t border-gray-700">
-        <h2 class="text-xl font-bold mb-6">Películas Recomendadas</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="recomendada bg-gray-800 rounded overflow-hidden">
-                <div class="w-full h-40 bg-gray-700 flex items-center justify-center text-sm">Película recomendada 1</div>
-                <div class="p-3">
-                    <p class="text-sm">El Padrino</p>
-                    <p class="text-xs text-gray-400">Francis Ford Coppola · 1972</p>
+    <section class="px-10 py-20 flex items-center justify-center border-t border-[#1e1e1e]">
+        <div class="frase-contenedor text-center max-w-3xl">
+            <span class="text-[#e8a87c] text-6xl leading-none font-cinzel">"</span>
+            <p class="frase-texto text-2xl md:text-3xl text-[#f0e6d3] leading-relaxed italic font-light font-cinzel">
+                La primera regla del Club de la Lucha es: no hablar del Club de la Lucha.
+            </p>
+            <span class="text-[#e8a87c] text-6xl leading-none font-cinzel">"</span>
+            <p class="frase-autor text-[#8a7a6a] text-sm mt-4 tracking-widest uppercase">— Tyler Durden</p>
+        </div>
+    </section>
+
+    <section class="px-10 py-12 border-t border-[#1e1e1e]">
+        <h2 class="reparto-titulo text-xl font-bold text-[#e8a87c] mb-8 tracking-widest uppercase font-cinzel">Reparto Principal</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="actor-item flex flex-col items-center gap-3">
+                <div class="w-24 h-24 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] flex items-center justify-center text-[#555] text-xs">
+                    FOTO
+                </div>
+                <div class="text-center">
+                    <p class="text-[#f0e6d3] text-sm">Brad Pitt</p>
+                    <p class="text-[#8a7a6a] text-xs">Tyler Durden</p>
                 </div>
             </div>
-            <div class="recomendada bg-gray-800 rounded overflow-hidden">
-                <div class="w-full h-40 bg-gray-700 flex items-center justify-center text-sm">Película recomendada 2</div>
-                <div class="p-3">
-                    <p class="text-sm">Memento</p>
-                    <p class="text-xs text-gray-400">Christopher Nolan · 2000</p>
+            <div class="actor-item flex flex-col items-center gap-3">
+                <div class="w-24 h-24 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] flex items-center justify-center text-[#555] text-xs">
+                    FOTO
+                </div>
+                <div class="text-center">
+                    <p class="text-[#f0e6d3] text-sm">Edward Norton</p>
+                    <p class="text-[#8a7a6a] text-xs">El Narrador</p>
                 </div>
             </div>
-            <div class="recomendada bg-gray-800 rounded overflow-hidden">
-                <div class="w-full h-40 bg-gray-700 flex items-center justify-center text-sm">Película recomendada 3</div>
-                <div class="p-3">
-                    <p class="text-sm">American History X</p>
-                    <p class="text-xs text-gray-400">Tony Kaye · 1998</p>
+            <div class="actor-item flex flex-col items-center gap-3">
+                <div class="w-24 h-24 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] flex items-center justify-center text-[#555] text-xs">
+                    FOTO
+                </div>
+                <div class="text-center">
+                    <p class="text-[#f0e6d3] text-sm">Helena Bonham Carter</p>
+                    <p class="text-[#8a7a6a] text-xs">Marla Singer</p>
+                </div>
+            </div>
+            <div class="actor-item flex flex-col items-center gap-3">
+                <div class="w-24 h-24 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] flex items-center justify-center text-[#555] text-xs">
+                    FOTO
+                </div>
+                <div class="text-center">
+                    <p class="text-[#f0e6d3] text-sm">Meat Loaf</p>
+                    <p class="text-[#8a7a6a] text-xs">Robert Paulson</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="p-8 border-t border-gray-700">
-        <h2 class="text-xl font-bold mb-6">Comentarios</h2>
+    <section class="px-10 py-12 border-t border-[#1e1e1e]">
+        <h2 class="recomendadas-titulo text-xl font-bold text-[#e8a87c] mb-8 tracking-widest uppercase font-cinzel">Películas Recomendadas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="recomendada bg-[#1a1a1a] rounded-sm overflow-hidden border border-[#2a2a2a]">
+                <div class="w-full h-48 bg-[#111] flex items-center justify-center text-[#555] text-sm">
+                    Película recomendada 1
+                </div>
+                <div class="p-4">
+                    <p class="text-[#f0e6d3] text-sm font-medium">El Padrino</p>
+                    <p class="text-[#8a7a6a] text-xs mt-1">Francis Ford Coppola · 1972</p>
+                </div>
+            </div>
+            <div class="recomendada bg-[#1a1a1a] rounded-sm overflow-hidden border border-[#2a2a2a]">
+                <div class="w-full h-48 bg-[#111] flex items-center justify-center text-[#555] text-sm">
+                    Película recomendada 2
+                </div>
+                <div class="p-4">
+                    <p class="text-[#f0e6d3] text-sm font-medium">Memento</p>
+                    <p class="text-[#8a7a6a] text-xs mt-1">Christopher Nolan · 2000</p>
+                </div>
+            </div>
+            <div class="recomendada bg-[#1a1a1a] rounded-sm overflow-hidden border border-[#2a2a2a]">
+                <div class="w-full h-48 bg-[#111] flex items-center justify-center text-[#555] text-sm">
+                    Película recomendada 3
+                </div>
+                <div class="p-4">
+                    <p class="text-[#f0e6d3] text-sm font-medium">American History X</p>
+                    <p class="text-[#8a7a6a] text-xs mt-1">Tony Kaye · 1998</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-10 py-12 border-t border-[#1e1e1e]">
+        <h2 class="comentarios-titulo text-xl font-bold text-[#e8a87c] mb-8 tracking-widest uppercase font-cinzel">Comentarios</h2>
         <div class="flex flex-col gap-4">
-            <div class="comentario bg-gray-800 rounded-full px-6 py-4 text-gray-300 text-sm">
+            <div class="comentario bg-[#1a1a1a] border border-[#2a2a2a] rounded-full px-8 py-5 text-[#c9b99a]">
                 "Una obra maestra del cine moderno. La actuación de Brad Pitt es impresionante." — Usuario1
             </div>
-            <div class="comentario bg-gray-800 rounded-full px-6 py-4 text-gray-300 text-sm">
+            <div class="comentario bg-[#1a1a1a] border border-[#2a2a2a] rounded-full px-8 py-5 text-[#c9b99a]">
                 "El giro final no me lo esperaba para nada. Brutal." — Usuario2
             </div>
         </div>
