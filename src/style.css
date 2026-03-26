@@ -1,31 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+
 @import "tailwindcss";
 
 @theme {
-  --color-fondo-principal: #0d0d0d;
-  --color-fondo-tarjeta: #1a1a1a;
-  --color-fondo-imagen: #111;
-  --color-borde: #2a2a2a;
-  --color-separador: #1e1e1e;
+    --color-azul-medianoche: #0A0C12;
+    --color-azul-oscuro: #223A5E;
+    --color-azul-real: #004F95;
+    --color-azul-brillante: #0088D4;
+    --color-crema: #FFF4D9;
+    --color-amarillo-suave: #FFD68A;
+    --color-salmon-claro: #E89A7B;
+    --color-naranja-vibrante: #FF7A45;
+    --color-purpura-rojizo: #9E506D;
+    --color-rojo-granate: #A3363F;
 
-  --color-texto-principal: #f0e6d3;
-  --color-texto-secundario: #c9b99a;
-  --color-texto-terciario: #8a7a6a;
-  --color-texto-placeholder: #555;
+    --color-fondo: #0d0d0d;
+    --color-tarjeta: #1a1a1a;
+    --color-borde: #2a2a2a;
+    --color-dorado: #e8a87c;
+    --color-texto: #f0e6d3;
+    --color-texto-secundario: #c9b99a;
+    --color-texto-apagado: #8a7a6a;
+    --color-separador: #1e1e1e;
 
-  --color-acento: #e8a87c;
+    --font-cinzel: 'Cinzel', serif;
+    --font-inter: 'Inter', sans-serif;
 
-  --font-cinzel: 'Cinzel', serif;
-  --font-inter: 'Inter', sans-serif;
+    --animate-aparecer: aparecer 0.8s ease-out forwards;
 
-  --color-azul-medianoche: #0d0d0d;
-  --color-azul-oscuro: #1a1a1a;
-  --color-azul-real: #2a2a2a;
-  --color-azul-brillante: #e8a87c;
-  --color-crema: #f0e6d3;
-  --color-amarillo-suave: #c9b99a;
-  --color-salmon-claro: #e8a87c;
-  --color-naranja-vibrante: #e8a87c;
-  --color-purpura-rojizo: #8a7a6a;
-  --color-rojo-granate: #e8a87c;
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@layer components {
+    .cuadro {
+        @apply bg-white rounded-sm overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+    }
+
+    .input-field {
+        @apply font-sans bg-transparent border-b border-gray-300 w-full py-2 outline-none focus:bg-white transition-colors duration-300;
+    }
+}
+
+.frase-texto {
+    background-image: linear-gradient(var(--color-dorado), var(--color-dorado));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 2px;
 }
