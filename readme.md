@@ -15,7 +15,7 @@ La página web simula la experiencia de usuario de un cine real e incluye las si
 
 * HTML5
 * Tailwind CSS
-* Node.js / npm (para la gestión de paquetes y el servidor de desarrollo)
+* Node.js / npm (para la gestión de paquetes y el servidor de desarrollo).
 
 ## 👥 Equipo de Desarrollo
 
