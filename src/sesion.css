@@ -1,30 +1,8 @@
 @import "tailwindcss";
 
 @layer base {
-  :root {
-    --bg: #0a0a0a;
-    --surface: #111111;
-    --surface-2: #181818;
-    --border: #222222;
-    --border-active: #3a3a3a;
-    --text-primary: #f0e6d3;
-    --text-secondary: #7a7068;
-    --text-muted: #3d3830;
-    --accent: #e8a87c;
-    --accent-dim: rgba(232, 168, 124, 0.12);
-    --red: #c0392b;
-    --red-dim: rgba(192, 57, 43, 0.15);
-    --font-display: 'Bebas Neue', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
-    --font-mono: 'DM Mono', monospace;
-  }
-
-  html {
-    @apply scroll-smooth;
-  }
-
   body {
-    @apply bg-(--bg) text-(--text-primary) font-(--font-body) text-[15px] leading-[1.6] min-h-screen;
+    @apply bg-(--color-fondo) text-(--color-texto) font-(--font-body) text-[15px] leading-[1.6] min-h-screen;
   }
 }
 
@@ -39,7 +17,7 @@
   }
 
   .date-strip {
-    @apply bg-(--surface) border-b border-(--border) px-10;
+    @apply bg-(--color-tarjeta) border-b border-(--color-borde) px-10;
   }
 
   .date-scroll {
@@ -56,15 +34,15 @@
   }
 
   .date-btn:hover {
-    @apply text-(--accent) bg-(--surface-2) scale-105 opacity-100;
+    @apply text-(--color-dorado) bg-(--surface-2) scale-105 opacity-100;
   }
 
   .date-btn.active {
-    @apply text-(--text-primary) border-b-(--accent);
+    @apply text-(--color-texto) border-b-(--color-dorado);
   }
 
   .date-btn.active .date-num {
-    @apply text-(--accent);
+    @apply text-(--color-dorado);
   }
 
   .date-num {
@@ -78,7 +56,7 @@
   /* Menu Navegacion*/
   nav {
     @apply flex w-full py-5 px-10 flex-row-reverse
-           border-b border-(--border)
+           border-b border-(--color-borde)
            sticky top-0 z-50
            bg-[rgba(10,10,10,0.92)] backdrop-blur-xs;
   }
@@ -90,7 +68,7 @@
   }
 
   .nav-back:hover {
-    @apply text-(--text-primary);
+    @apply text-(--color-texto);
   }
 
   .nav-back::before {
@@ -101,7 +79,7 @@
   /* Tecnologias */
   .filter-bar {
     @apply flex items-center gap-2 py-4 px-10
-           border-b border-(--border) flex-wrap;
+           border-b border-(--color-borde) flex-wrap;
   }
 
   .filter-label {
@@ -116,11 +94,11 @@
   }
 
   .filter-chip:hover {
-    @apply border-(--text-secondary) text-(--text-primary);
+    @apply border-(--text-secondary) text-(--color-texto);
   }
 
   .filter-chip.active {
-    @apply bg-(--accent-dim) border-(--accent) text-(--accent);
+    @apply bg-(--accent-dim) border-(--color-dorado) text-(--color-dorado);
   }
 
   /* Main */
@@ -129,7 +107,7 @@
   }
 
   .section-header {
-    @apply flex gap-4 mb-8 pb-4 border-b border-(--border);
+    @apply flex gap-4 mb-8 pb-4 border-b border-(--color-borde);
   }
 
   .section-title {
@@ -144,7 +122,7 @@
   /* Card Peliculas */
   .movie-card {
     @apply grid grid-cols-[250px_1fr]
-           bg-(--surface) border border-(--border)
+           bg-(--color-tarjeta) border border-(--color-borde)
            mb-1 transition-colors duration-200;
   }
 
@@ -170,7 +148,7 @@
     @apply absolute top-3 left-3
            bg-[rgba(10,10,10,0.88)] border border-(--border-active)
            py-1 px-2 font-(--font-mono) text-[13px]
-           text-(--accent) tracking-[0.02em];
+           text-(--color-dorado) tracking-[0.02em];
   }
 
   .movie-info {
@@ -191,7 +169,7 @@
 
   .movie-title {
     @apply font-(--font-display) text-5xl leading-[0.95]
-           tracking-[0.01em] text-(--text-primary);
+           tracking-[0.01em] text-(--color-texto);
   }
 
   .movie-synopsis {
@@ -210,19 +188,19 @@
 
   .session-slot {
     @apply flex flex-col gap-1 py-3 px-4
-           border border-(--border) bg-(--bg)
+           border border-(--color-borde) bg-(--color-fondo)
            cursor-pointer transition-all
            min-w-32.5 no-underline 
            duration-300 ease-out;
   }
 
   .session-slot:hover {
-    @apply border-(--accent) bg-(--accent-dim) -translate-y-2;
+    @apply border-(--color-dorado) bg-(--accent-dim) -translate-y-2;
   }
 
   .slot-time {
     @apply font-(--font-mono) text-xl
-           text-(--text-primary) tracking-[-0.02em];
+           text-(--color-texto) tracking-[-0.02em];
   }
 
   .slot-sala {
@@ -232,11 +210,11 @@
   .slot-format {
     @apply inline-flex items-center gap-1
            text-[9px] tracking-widest uppercase
-           text-(--accent) font-medium mt-0.5;
+           text-(--color-dorado) font-medium mt-0.5;
   }
 
   .slot-format-dot {
-    @apply size-1 bg-(--accent) shrink-0;
+    @apply size-1 bg-(--color-dorado) shrink-0;
   }
 
   .movies-list {

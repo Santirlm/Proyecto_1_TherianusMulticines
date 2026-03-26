@@ -23,6 +23,17 @@
     --color-texto-apagado: #8a7a6a;
     --color-separador: #1e1e1e;
 
+    --surface-2: #181818;
+    --border-active: #3a3a3a;
+    --text-secondary: #7a7068;
+    --text-muted: #3d3830;
+    --accent-dim: rgba(232, 168, 124, 0.12);
+    --red: #c0392b;
+    --red-dim: rgba(192, 57, 43, 0.15);
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+
     --font-cinzel: 'Cinzel', serif;
     --font-inter: 'Inter', sans-serif;
 
