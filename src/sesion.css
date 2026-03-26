@@ -77,23 +77,14 @@
 
   /* Menu Navegacion*/
   nav {
-    @apply flex items-center justify-between py-5 px-10
+    @apply flex w-full py-5 px-10 flex-row-reverse
            border-b border-(--border)
            sticky top-0 z-50
            bg-[rgba(10,10,10,0.92)] backdrop-blur-xs;
   }
 
-  .nav-logo {
-    @apply font-(--font-display) text-3xl tracking-wide
-           text-(--text-primary);
-  }
-
-  .nav-logo span {
-    @apply text-(--accent);
-  }
-
   .nav-back {
-    @apply flex items-center gap-2 no-underline
+    @apply no-underline
            text-(--text-secondary) text-[13px] tracking-wide
            uppercase font-medium transition-colors duration-400;
   }
