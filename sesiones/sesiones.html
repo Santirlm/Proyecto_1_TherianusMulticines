@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/sesion.css">
+    <title>Sesiones</title>
+  </head>
+  <body class="bg-(--color-azul-medianoche)">
+
+    <!-- Navegación -->
+     <nav class="text-white flex p-5">
+      <h1 class="text-3xl">Logo</h1>
+
+      <a class="ml-auto" href="../index.html">Volver a la página de inicio</a>
+     </nav>
+
+    <main>
+      <!-- Fechas Sesiones -->
+      <div class="session-container">
+        <div class="flex items-baseline space-x-12">
+          <div class="date-item" data-date="21">21</div>
+          <div class="date-item active" data-date="22">22</div>
+          <div class="date-item" data-date="23">23</div>
+          <div class="date-item" data-date="24">24</div>
+          <div class="date-item" data-date="24">25</div>
+          <div class="date-item" data-date="24">26</div>
+          <div class="date-item" data-date="24">27</div>
+          <div class="date-item" data-date="24">28</div>
+          <div class="date-item" data-date="24">29</div>
+          <div class="date-item" data-date="24">30</div>
+          <div class="date-item" data-date="24">31</div>
+          <div class="date-item" data-date="24">01</div>
+        </div>
+      </div>
+
+      <!-- Peliculas -->
+        <section class="max-w-6xl mx-auto p-8 space-y-16">
+
+          <!-- Karate Torremolinos Portada -->
+          <article class="flex flex-col md:flex-row gap-8 items-start bg-black/20 p-6 rounded-2xl backdrop-blur-sm border border-white/5">
+            <div data-hover="" data-pixelated-image-reveal="" class="pixelated-image-card w-full md:w-1/3 flex-shrink-0">
+              <div class="before__100"></div>
+              <div class="pixelated-image-card__default">
+                <img src="../public/Portada-Torremolinos.jpg" width="400" alt="Portada" class="pixelated-image-card__img rounded-lg">
+              </div>
+              <div data-pixelated-image-reveal-active="" class="pixelated-image-card__active">
+                <img src="../public/prime-torremolinos.jpg" width="400" alt="Frame" class="pixelated-image-card__img rounded-lg">
+              </div>
+              <div data-pixelated-image-reveal-grid="" class="pixelated-image-card__pixels">
+                <div class="pixelated-image-card__pixel"></div>
+              </div>
+            </div>
+
+            <!-- Horario -->
+            <div class="flex-grow text-white w-full">
+              <h2 class="text-4xl font-bold mb-4 tracking-tighter">Karate a muerte en Torremolinos</h2>
+              <p class="text-gray-400 mb-6 max-w-xl">Un clásico de culto. Acción, artes marciales y mucho humor en la costa del sol.</p>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-white/10 p-4 rounded-xl border-l-4 border-red-500">
+                  <span class="text-xs font-bold uppercase tracking-widest text-red-400">Sala 01 · IMAX Laser</span>
+                  <div class="flex justify-between items-center mt-2">
+                    <span class="text-2xl font-mono">18:00 - 19:45</span>
+                    <button class="bg-red-600 hover:bg-red-700 px-4 py-1 rounded text-sm transition">Comprar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+    </main>
+    <script type="module" src="../src/seesion.js"></script>
+  </body>
+</html>
