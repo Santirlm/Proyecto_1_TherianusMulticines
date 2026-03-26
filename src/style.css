@@ -1,14 +1,39 @@
 @import "tailwindcss";
 
 @theme {
-  --color-azul-medianoche: #0A0C12;
-  --color-azul-oscuro: #223A5E;
-  --color-azul-real: #004F95;
-  --color-azul-brillante: #0088D4;
-  --color-crema: #FFF4D9;
-  --color-amarillo-suave: #FFD68A;
-  --color-salmon-claro: #E89A7B;
-  --color-naranja-vibrante: #FF7A45;
-  --color-purpura-rojizo: #9E506D;
-  --color-rojo-granate: #A3363F;
+  /* Fuentes */
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-cinzel: 'Cinzel', serif;
+
+  /* Paleta Base*/
+  --color-cine-bg: #0A0C12;          /* azul-medianoche */
+  --color-cine-text: #FFF4D9;        /* crema */
+  --color-cine-text-sec: #E89A7B;    /* salmon-claro */
+  --color-cine-text-low: #9E506D;    /* purpura-rojizo (para el footer) */
+  --color-cine-gold: #FFD68A;        /* amarillo-suave */
+  --color-cine-card: #223A5E;        /* azul-oscuro */
+  --color-cine-border: #004F95;      /* azul-real */
+  --color-cine-sep: #004F95;         /* azul-real (separador) */
+  --color-cine-blue: #0088D4;        /* azul-brillante (para las sombras) */
+  --color-cine-placeholder: #0A0C12; /* Fondo de carga para imágenes */
+}
+
+/* Configuraciones base del navegador */
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-cine-bg);
+  color: var(--color-cine-text);
+}
+
+/* Altura personalizada para la clase h-150 que usaste en las tarjetas */
+@utility h-150 {
+  height: 37.5rem; /* 600px */
 }
