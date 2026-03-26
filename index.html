@@ -1,14 +1,163 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>proyecto-1-therianusmulticines</title>
-     <link rel="stylesheet" href="src/style.css">
-  </head>
-  <body>
-    <a href="/peliculas/club-de-la-lucha.html">Club de la Lucha</a>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therianus Multicines</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body class="bg-cine-bg text-cine-text font-inter overflow-hidden">
+    
+    <div id="cortinas" class="fixed inset-0 z-50 flex overflow-hidden bg-black">
+       <div id="cortina-izq" class="w-1/2 h-full z-20 relative overflow-hidden">
+            <img src="/cortinaizquierda.jpg" alt="Telón izquierdo" class="absolute inset-0 w-full h-full object-cover object-left" />
+            <div class="absolute inset-0 bg-black/40"></div> 
+        </div>
+        
+        <div id="cortina-der" class="w-1/2 h-full z-20 relative overflow-hidden">
+            <img src="/cortinaderecha.jpg" alt="Telón derecho" class="absolute inset-0 w-full h-full object-cover object-right" />
+            <div class="absolute inset-0 bg-black/40"></div> 
+        </div>
+
+        <button id="btn-entrar" class="absolute z-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+        bg-cine-gold text-cine-bg font-cinzel font-bold py-4 px-10 rounded-full text-2xl hover:brightness-110 transition-all
+         hover:scale-105">
+          Ver cartelera
+        </button>
+
+        <audio id="audio-boton" src="/clic.mp3"></audio>
+    </div>
+    
+    <audio id="musica-fondo" src="/musicafondo.mp3" loop></audio>
+
+    <div id="contenido-principal" class="opacity-0">
+        
+        <header class="h-screen flex flex-col items-center justify-center relative overflow-hidden px-4">
+            <h1 class="font-cinzel text-5xl md:text-8xl font-bold text-cine-gold mb-4 z-10 text-center">
+                Therianus Multicines
+            </h1>
+            
+            <h2 class="font-cinzel text-xl md:text-3xl text-cine-text-sec mb-12 z-10 uppercase opacity-80">
+                Próximos estrenos
+            </h2>
+
+            <div class="w-full max-w-6xl overflow-hidden z-10">
+                <div id="carrusel" class="flex gap-6 px-4">  
+
+                    <div class="w-64 h-96 flex-none rounded-sm border border-cine-border bg-cine-card shadow-2xl overflow-hidden group">
+                      <img src="/dune.jpg" class="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" />
+                    </div>
+                    
+                    <div class="w-64 h-96 flex-none rounded-sm border border-cine-border bg-cine-card shadow-2xl overflow-hidden group">
+                      <img src="/scarymovie.jpg" class="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" />
+                    </div>
+
+                    <div class="w-64 h-96 flex-none rounded-sm border border-cine-border bg-cine-card shadow-2xl overflow-hidden group">
+                      <img src="/shrek.jpg" class="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" />
+                    </div>
+                   <div class="w-64 h-96 flex-none rounded-sm border border-cine-border bg-cine-card shadow-2xl overflow-hidden group">
+                      <img src="/toystory5.jpeg" class="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" />
+                    </div>
+                    
+                    <div class="w-64 h-96 flex-none rounded-sm border border-cine-border bg-cine-card shadow-2xl overflow-hidden group">
+                      <img src="/avatar4.jpg" class="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" />
+                    </div>   
+                    
+                    <div class="w-64 h-96 flex-none rounded-sm border border-cine-border bg-cine-card shadow-2xl overflow-hidden group">
+                      <img src="/avengers.jpeg" class="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100" />
+                    </div>  
+                </div>
+            </div>
+        </header>
+
+      <main class="min-h-screen border-t border-cine-sep bg-cine-bg py-20 px-8">
+            
+    <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-cine-gold mb-16 text-center uppercase">
+        Cartelera Actual
+    </h2>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+        
+        <a href=".\peliculas\club-de-la-lucha.html" class="pelicula bg-cine-card rounded-sm border border-cine-border overflow-hidden transition-colors transition-shadow duration-300 block group hover:border-cine-gold">
+            <div class="h-150 bg-cine-placeholder relative overflow-hidden">
+                <img src="/Portada-ClubDeLaLucha.jpg" alt="Cartel de El club de la lucha" class="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500" />
+            </div>
+            
+            <div class="p-8 border-t border-cine-border relative z-10 bg-cine-card">
+                <h3 class="font-cinzel text-2xl font-bold text-cine-text mb-2 group-hover:text-cine-gold transition-colors">El club de la lucha</h3>
+                <p class="font-inter text-cine-text-sec text-sm uppercase opacity-80">Haz clic para ver detalles</p>
+            </div>
+        </a>
+
+        <a href="karate-a-muerte-en-torremolinos.html" class="pelicula bg-cine-card rounded-sm border border-cine-border overflow-hidden transition-colors transition-shadow duration-300 block group hover:border-cine-gold">
+            <div class="h-150 bg-cine-placeholder relative overflow-hidden">
+                <img src="/Portada-Torremolinos.jpg" alt="Cartel de Karate a muerte en Torremolinos" class="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500" />
+            </div>
+            
+            <div class="p-8 border-t border-cine-border relative z-10 bg-cine-card">
+                <h3 class="font-cinzel text-2xl font-bold text-cine-text mb-2 group-hover:text-cine-gold transition-colors">Karate a muerte en Torremolinos</h3>
+                <p class="font-inter text-cine-text-sec text-sm uppercase opacity-80">Haz clic para ver detalles</p>
+            </div>
+        </a>
+
+        <a href="cars.html" class="pelicula bg-cine-card rounded-sm border border-cine-border overflow-hidden transition-colors transition-shadow duration-300 block group hover:border-cine-gold">
+            <div class="h-150 bg-cine-placeholder relative overflow-hidden">
+                <img src="/Portada-Cars.jpg" alt="Cartel de Cars" class="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500" />
+            </div>
+            
+            <div class="p-8 border-t border-cine-border relative z-10 bg-cine-card">
+                <h3 class="font-cinzel text-2xl font-bold text-cine-text mb-2 group-hover:text-cine-gold transition-colors">Zootropolis 2</h3>
+                <p class="font-inter text-cine-text-sec text-sm uppercase opacity-80">Haz clic para ver detalles</p>
+            </div>
+        </a> 
+
+        <a href="torrente-presidente.html" class="pelicula bg-cine-card rounded-sm border border-cine-border overflow-hidden transition-colors transition-shadow duration-300 block group hover:border-cine-gold">
+            <div class="h-150 bg-cine-placeholder relative overflow-hidden">
+                <img src="/Portada-TorrentePresidente.jpg" alt="Cartel de Torrente Presidente" class="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500" />
+            </div>
+            
+            <div class="p-8 border-t border-cine-border relative z-10 bg-cine-card">
+                <h3 class="font-cinzel text-2xl font-bold text-cine-text mb-2 group-hover:text-cine-gold transition-colors">Zootropolis 2</h3>
+                <p class="font-inter text-cine-text-sec text-sm uppercase opacity-80">Haz clic para ver detalles</p>
+            </div>
+        </a>         
+    </div>
+</main>
+
+        <section id="seccion-comentarios" class="min-h-[80vh] flex flex-col items-center justify-center relative py-20 bg-cine-card/20 border-t border-cine-sep/50">
+    
+    <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-cine-gold mb-24 text-center uppercase">
+        Lo que dicen los usuarios
+    </h2>
+
+    <div class="w-full max-w-4xl relative h-80"> 
+    
+    <div class="w-full max-w-4xl relative h-80"> 
+    
+    <div class="bocadillo absolute left-0 top-0 bg-white text-cine-bg font-inter p-6 rounded-3xl rounded-bl-none font-bold text-xl max-w-xs border border-white/50">
+        "Me encantan las palomitas de este cine"
+    </div>
+    
+    <div class="bocadillo absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-cine-bg font-inter p-6 rounded-3xl rounded-br-none font-bold text-xl max-w-xs border border-white/50">
+        "Los asientos son super cómodos"
+    </div>
+
+    <div class="bocadillo absolute left-1/4 bottom-0 bg-white text-cine-bg font-inter p-6 rounded-3xl rounded-bl-none font-bold text-xl max-w-xs border border-white/50">
+        "El sonido es bastante inmersivo"
+    </div>
+</div>
+    
+</div>
+</section>
+        
+        <footer class="py-12 bg-black border-t border-cine-border text-center">
+            <p class="font-cinzel text-cine-text-low text-lg uppercase">
+                Proyecto StoryTelling DAMDAW — Armando, Jorge, Santiago
+            </p>
+        </footer>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script> 
+</body>
 </html>
