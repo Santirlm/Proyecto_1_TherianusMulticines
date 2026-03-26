@@ -1,39 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
-  /* Fuentes */
-  --font-inter: 'Inter', system-ui, sans-serif;
+  --color-fondo-principal: #0d0d0d;
+  --color-fondo-tarjeta: #1a1a1a;
+  --color-fondo-imagen: #111;
+  --color-borde: #2a2a2a;
+  --color-separador: #1e1e1e;
+
+  --color-texto-principal: #f0e6d3;
+  --color-texto-secundario: #c9b99a;
+  --color-texto-terciario: #8a7a6a;
+  --color-texto-placeholder: #555;
+
+  --color-acento: #e8a87c;
+
   --font-cinzel: 'Cinzel', serif;
+  --font-inter: 'Inter', sans-serif;
 
-  /* Paleta Base*/
-  --color-cine-bg: #0A0C12;          /* azul-medianoche */
-  --color-cine-text: #FFF4D9;        /* crema */
-  --color-cine-text-sec: #E89A7B;    /* salmon-claro */
-  --color-cine-text-low: #9E506D;    /* purpura-rojizo (para el footer) */
-  --color-cine-gold: #FFD68A;        /* amarillo-suave */
-  --color-cine-card: #223A5E;        /* azul-oscuro */
-  --color-cine-border: #004F95;      /* azul-real */
-  --color-cine-sep: #004F95;         /* azul-real (separador) */
-  --color-cine-blue: #0088D4;        /* azul-brillante (para las sombras) */
-  --color-cine-placeholder: #0A0C12; /* Fondo de carga para imágenes */
-}
-
-/* Configuraciones base del navegador */
-:root {
-  color-scheme: dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  margin: 0;
-  background-color: var(--color-cine-bg);
-  color: var(--color-cine-text);
-}
-
-/* Altura personalizada para la clase h-150 que usaste en las tarjetas */
-@utility h-150 {
-  height: 37.5rem; /* 600px */
+  --color-azul-medianoche: #0d0d0d;
+  --color-azul-oscuro: #1a1a1a;
+  --color-azul-real: #2a2a2a;
+  --color-azul-brillante: #e8a87c;
+  --color-crema: #f0e6d3;
+  --color-amarillo-suave: #c9b99a;
+  --color-salmon-claro: #e8a87c;
+  --color-naranja-vibrante: #e8a87c;
+  --color-purpura-rojizo: #8a7a6a;
+  --color-rojo-granate: #e8a87c;
 }

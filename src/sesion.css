@@ -1,112 +1,271 @@
 @import "tailwindcss";
 
+@layer base {
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --surface-2: #181818;
+    --border: #222222;
+    --border-active: #3a3a3a;
+    --text-primary: #f0e6d3;
+    --text-secondary: #7a7068;
+    --text-muted: #3d3830;
+    --accent: #e8a87c;
+    --accent-dim: rgba(232, 168, 124, 0.12);
+    --red: #c0392b;
+    --red-dim: rgba(192, 57, 43, 0.15);
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-(--bg) text-(--text-primary) font-(--font-body) text-[15px] leading-[1.6] min-h-screen;
+  }
+}
+
 @layer components {
+  /* Fechas */
   .session-container {
-    @apply bg-black h-40 flex items-center px-10 overflow-hidden relative;
+    @apply h-40 flex items-center px-10 relative;
   }
 
   .date-item {
-    @apply opacity-30 font-bold text-6xl text-white select-none;
+    @apply opacity-30 font-bold text-6xl text-white;
   }
-  
-  .date-item.active {
-    @apply opacity-100;
+
+  .date-strip {
+    @apply bg-(--surface) border-b border-(--border) px-10;
   }
-}
 
-body {
-  background-color: var(--color-neutral-900);
-  color: var(--color-light);
-  font-size: 1vw;
-  cursor: pointer;
-}
+  .date-scroll {
+    @apply flex items-stretch min-w-max;
+  }
 
-a,
-button,
-.pixelated-image-card{
-  cursor: pointer;
-}
+  .date-btn {
+    @apply flex flex-col items-center justify-center
+           py-4.5 px-5 gap-0.75 min-w-16
+           cursor-pointer border-none bg-transparent
+           font-(--font-body) text-(--text-muted)
+           border-b-2 border-b-transparent
+           transition-all duration-300 ease-out;
+  }
 
-.cloneable {
-  padding: var(--container-padding);
-  justify-content: center;
-  align-items: center;
-  min-height: 100svh;
-  display: flex;
-  position: relative;
-}
+  .date-btn:hover {
+    @apply text-(--text-secondary) bg-(--surface-2) scale-105;
+  }
 
-.pixelated-image-card {
-  background-color: var(--color-neutral-800);
-  color: var(--color-primary);
-  border-radius: .5em;
-  width: 30vw;
-  max-width: 100%;
-  position: relative;
-  overflow: hidden;
-}
+  .date-btn.active {
+    @apply text-(--text-primary) border-b-(--accent);
+  }
 
-.before__100 {
-  padding-top: 100%;
-}
+  .date-btn.active .date-num {
+    @apply text-(--accent);
+  }
 
-.pixelated-image-card__default, 
-.pixelated-image-card__img,
-.pixelated-image-card__active, 
-.pixelated-image-card__pixels{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+  .date-num {
+    @apply font-(--font-display) text-[32px] leading-none tracking-[0.02em];
+  }
 
-.pixelated-image-card__active {
-  display: none;
-}
+  .date-day {
+    @apply text-[10px] tracking-widest uppercase font-medium;
+  }
 
-.pixelated-image-card__pixel {
-  background-color: currentColor;
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: absolute;
-}
+  /* Menu Navegacion*/
+  nav {
+    @apply flex items-center justify-between py-5 px-10
+           border-b border-(--border)
+           sticky top-0 z-50
+           bg-[rgba(10,10,10,0.92)] backdrop-blur-xs;
+  }
 
-.osmo-credits {
-  z-index: 999;
-  pointer-events: none;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 4em;
-  padding: 1em;
-  display: flex;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
+  .nav-logo {
+    @apply font-(--font-display) text-3xl tracking-wide
+           text-(--text-primary);
+  }
 
-.osmo-credits__p {
-  pointer-events: auto;
-  color: #efeeec80;
-  text-align: center;
-  margin: 0;
-  font-family: PP Neue Montreal, Arial, sans-serif;
-  font-size: 1.125em;
-  font-weight: 500;
-  line-height: 1.3;
-}
+  .nav-logo span {
+    @apply text-(--accent);
+  }
 
-.osmo-credits__p-a {
-  color: #efeeec;
-}
+  .nav-back {
+    @apply flex items-center gap-2 no-underline
+           text-(--text-secondary) text-[13px] tracking-wide
+           uppercase font-medium transition-colors duration-400;
+  }
 
-@font-face {
-  font-family: 'PP Neue Montreal';
-  src: url('https://cdn.prod.website-files.com/6819ed8312518f61b84824df/6819ed8312518f61b84825ba_PPNeueMontreal-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+  .nav-back:hover {
+    @apply text-(--text-primary);
+  }
+
+  .nav-back::before {
+    content: '←';
+    @apply text-base;
+  }
+
+  /* Tecnologias */
+  .filter-bar {
+    @apply flex items-center gap-2 py-4 px-10
+           border-b border-(--border) flex-wrap;
+  }
+
+  .filter-label {
+    @apply text-[11px] tracking-[0.12em] uppercase
+           text-(--text-secondary) mr-2 font-medium;
+  }
+
+  .filter-chip {
+    @apply py-1.5 px-[14px] border border-(--border-active) rounded-xs
+           bg-transparent text-(--text-secondary) font-(--font-body)
+           text-xs cursor-pointer tracking-tighter transition-all duration-150;
+  }
+
+  .filter-chip:hover {
+    @apply border-(--text-secondary) text-(--text-primary);
+  }
+
+  .filter-chip.active {
+    @apply bg-(--accent-dim) border-(--accent) text-(--accent);
+  }
+
+  /* Main */
+  main {
+    @apply max-w-[1300px] mx-auto pt-12 px-10 pb-20;
+  }
+
+  .section-header {
+    @apply flex gap-4 mb-8 pb-4 border-b border-(--border);
+  }
+
+  .section-title {
+    @apply font-(--font-display) text-[13px] tracking-wide
+           uppercase text-(--text-secondary);
+  }
+
+  .section-count {
+    @apply font-(--font-mono) text-[11px] text-(--text-muted) tracking-wider;
+  }
+
+  /* Card Peliculas */
+  .movie-card {
+    @apply grid grid-cols-[250px_1fr]
+           bg-(--surface) border border-(--border)
+           mb-1 transition-colors duration-200;
+  }
+
+  .movie-card:hover {
+    @apply border-(--border-active);
+  }
+
+  .movie-poster {
+    @apply relative overflow-hidden;
+  }
+
+  .movie-poster img {
+    @apply w-full h-full block duration-300;
+  }
+
+  .poster-placeholder {
+    @apply w-full h-full flex items-center justify-center
+           font-(--font-display) text-[11px] tracking-[0.15em]
+           text-(--text-muted) uppercase min-h-75;
+  }
+
+  .rating-badge {
+    @apply absolute top-3 left-3
+           bg-[rgba(10,10,10,0.88)] border border-(--border-active)
+           py-1 px-2 font-(--font-mono) text-[13px]
+           text-(--accent) tracking-[0.02em];
+  }
+
+  .movie-info {
+    @apply py-7 px-8 flex flex-col gap-5;
+  }
+
+  .movie-meta {
+    @apply flex items-center gap-4 flex-wrap;
+  }
+
+  .meta-tag {
+    @apply text-[10px] uppercase text-(--text-secondary) font-medium;
+  }
+
+  .meta-dot {
+    @apply rounded-full bg-(--border-active) shrink-0;
+  }
+
+  .movie-title {
+    @apply font-(--font-display) text-5xl leading-[0.95]
+           tracking-[0.01em] text-(--text-primary);
+  }
+
+  .movie-synopsis {
+    @apply text-sm text-(--text-secondary) font-light leading-[1.65] max-w-[500px];
+  }
+
+  /* Sesiones */
+  .sessions-label {
+    @apply text-[10px] tracking-[0.15em] uppercase
+           text-(--text-muted) font-medium mb-2.5;
+  }
+
+  .sessions-grid {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .session-slot {
+    @apply flex flex-col gap-1 py-3 px-4
+           border border-(--border) bg-(--bg)
+           cursor-pointer transition-all
+           min-w-32.5 no-underline 
+           duration-300 ease-out;
+  }
+
+  .session-slot:hover {
+    @apply border-(--accent) bg-(--accent-dim) -translate-y-2;
+  }
+
+  .slot-time {
+    @apply font-(--font-mono) text-xl
+           text-(--text-primary) tracking-[-0.02em];
+  }
+
+  .slot-sala {
+    @apply text-[10px] tracking-[0.12em] uppercase text-(--text-secondary);
+  }
+
+  .slot-format {
+    @apply inline-flex items-center gap-1
+           text-[9px] tracking-widest uppercase
+           text-(--accent) font-medium mt-0.5;
+  }
+
+  .slot-format-dot {
+    @apply size-1 bg-(--accent) shrink-0;
+  }
+
+  .movies-list {
+    @apply flex flex-col gap-0.5;
+  }
+
+  /* Media querys */
+  @media (max-width: 720px) {
+    nav             { @apply py-4 px-5; }
+    .date-strip     { @apply px-5; }
+    .filter-bar     { @apply py-3 px-5; }
+    main            { @apply pt-8 px-5 pb-15; }
+    .movie-title    { @apply text-[32px]; }
+    .movie-info     { @apply p-5 gap-3.5; }
+    .slot-time      { @apply text-base; }
+    .session-slot   { @apply min-w-[110px]; }
+  }
+
+  @media (max-width: 480px) {
+    .movie-card   { @apply grid-cols-1; }
+    .movie-poster { @apply aspect-video; }
+  }
 }
