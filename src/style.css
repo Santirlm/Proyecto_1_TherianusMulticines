@@ -1,14 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-azul-medianoche: #0A0C12;
-  --color-azul-oscuro: #223A5E;
-  --color-azul-real: #004F95;
-  --color-azul-brillante: #0088D4;
-  --color-crema: #FFF4D9;
-  --color-amarillo-suave: #FFD68A;
-  --color-salmon-claro: #E89A7B;
-  --color-naranja-vibrante: #FF7A45;
-  --color-purpura-rojizo: #9E506D;
-  --color-rojo-granate: #A3363F;
+  --color-fondo-principal: #0d0d0d;
+  --color-fondo-tarjeta: #1a1a1a;
+  --color-fondo-imagen: #111;
+  --color-borde: #2a2a2a;
+  --color-separador: #1e1e1e;
+
+  --color-texto-principal: #f0e6d3;
+  --color-texto-secundario: #c9b99a;
+  --color-texto-terciario: #8a7a6a;
+  --color-texto-placeholder: #555;
+
+  --color-acento: #e8a87c;
+
+  --font-cinzel: 'Cinzel', serif;
+  --font-inter: 'Inter', sans-serif;
+
+  --color-azul-medianoche: #0d0d0d;
+  --color-azul-oscuro: #1a1a1a;
+  --color-azul-real: #2a2a2a;
+  --color-azul-brillante: #e8a87c;
+  --color-crema: #f0e6d3;
+  --color-amarillo-suave: #c9b99a;
+  --color-salmon-claro: #e8a87c;
+  --color-naranja-vibrante: #e8a87c;
+  --color-purpura-rojizo: #8a7a6a;
+  --color-rojo-granate: #e8a87c;
 }
